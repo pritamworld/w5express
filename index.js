@@ -18,7 +18,7 @@ app.use("/query", (req, res, next) => {
     next();
 })
 
-app.use("/static", express.static('views'));
+app.use("/static", express.static(__dirname + '/views'));
 
 app.get('/', (req, res) => {
     res.send('Hello World');
